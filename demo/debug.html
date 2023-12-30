@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="./style.css">
+		<meta name="description" content="osu!lazer Style Custom Cursor for Web"/>
+		<title>osu! Cursor</title>
+	</head>
+	<body>
+		<script src="../src/v2.js"></script>
+		<canvas id="debug"></canvas>
+		<div>
+			<p>State:</p>
+			<pre><code id="state"></code></pre>
+		</div>
+		<script>
+		var cursor = new osuCursor(document.getElementById("debug"), { debug: true });
+		var stateBlock = document.getElementById("state");
+		setInterval(function() {
+			stateBlock.textContent = JSON.stringify(cursor.state);
+		}, 50);
+		</script>
+	</body>
+</html>

@@ -78,7 +78,7 @@ export default class osuCursor {
 		document.addEventListener('drag', this.dragFunc, {passive: true});
 		document.addEventListener('dragend', this.dragEndFunc, {passive: true});
 	}
-		
+
 	getParentAttribute(element, attributeName) {
 		let value = element.getAttribute(attributeName);
 		if (value)
